@@ -8,7 +8,7 @@ class Dashboard extends CI_Controller
         parent::__construct();
 
         if($_SESSION['email'] == false) {
-            redirect('logout');
+            redirect('login');
         }
     }
 
