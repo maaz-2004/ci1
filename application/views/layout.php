@@ -19,7 +19,7 @@
     <link href="<?= base_url() ?>resources/css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -141,7 +141,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav navbar-align">
 
-                        <?php if($_SESSION['email']) { ?>
+                        <?php if ($_SESSION['email']) { ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                                     <i class="align-middle" data-feather="settings"></i>
@@ -151,8 +151,14 @@
                                     <img src="<?= base_url() ?>resources/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Maaz ur Rehman" /> <span class="text-dark">Maaz ur Rehman</span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <a class="dropdown-item" href="<?=site_url('login/logout')?>">Log out</a>
+                                    <a class="dropdown-item" href="<?= site_url('login/logout') ?>">Log out</a>
                                 </div>
+                            </li>
+                        <?php } else { ?>
+                            <li class="nav-item">
+                                <a class="nav-link d-none d-sm-inline-block" href="<?=site_url('signup')?>" >
+                                    Signup
+                                </a>
                             </li>
                         <?php } ?>
                     </ul>

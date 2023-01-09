@@ -7,6 +7,7 @@ class UserModel extends CI_Model
         parent::__construct();
     }
 
+    // no need to write sql 
     public function verifyLogin($email, $password)
     {
         $arr = $this->db->where('email', $email)
